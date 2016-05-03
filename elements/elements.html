@@ -17388,53 +17388,6 @@ module.exports = Array.isArray || function (arr) {
     </style>
   </template>
 </dom-module>
-<dom-module id="my-list" assetpath="my-list/">
-  <template>
-    <style>
-      :host {
-        display: block;
-      }
-
-      span {
-        @apply(--paper-font-body1);
-      }
-    </style>
-
-    <ul>
-      <template is="dom-repeat" items="{{items}}">
-        <li><span>{{item}}</span></li>
-      </template>
-    </ul>
-  </template>
-
-  <script>
-    (function() {
-      'use strict';
-
-      Polymer({
-        is: 'my-list',
-
-        properties: {
-          items: {
-            type: Array,
-            notify: true,
-          }
-        },
-
-        ready: function() {
-          this.items = [
-            'Responsive Web App boilerplate',
-            'Iron Elements and Paper Elements',
-            'End-to-end Build Tooling (including Vulcanize)',
-            'Unit testing with Web Component Tester',
-            'Routing with Page.js',
-            'Offline support with the Platinum Service Worker Elements'
-          ];
-        }
-      });
-    })();
-  </script>
-</dom-module>
 <script>function MakePromise (asap) {
   function Promise(fn) {
 		if (typeof this !== 'object' || typeof fn !== 'function') throw new TypeError();
@@ -18461,13 +18414,17 @@ if (!window.Promise) {
 
 <dom-module id="treehouse-json" assetpath="treehouse-json/">
   <template>
-
     <style>
       :host {
         display: block;
       }
       table {
         margin: 0 auto;
+      }
+
+      td {
+        margin: 0 2em;
+        line-height: 1.5;
       }
 
       h2, h3 {
@@ -18477,23 +18434,66 @@ if (!window.Promise) {
       th {
         text-align: left;
       }
+
+      .badge-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 2rem;
+      }
+
+      .badge {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        /*justify-content: space-around;
+        vertical-align: bottom;*/
+        background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 180px;
+        height: 180px;
+        margin: 20px;
+      }
+
+      .title {
+        padding-top: 20%;
+        flex: 1;
+      }
+      .badge h5, .badge h4, p {
+        margin: .2em 0;
+      }
     </style>
-    <h3>Treehouse Achievements for:</h3>
-    <h2>{{response.name}}</h2>
-    <table class="point-wrap">
-      <tbody><tr>
-        <th>Subject</th>
-        <th>Points</th>
-      </tr>
-      </tbody><tbody>
-        <template is="dom-repeat" items="{{toArray(response.points)}}">
-          <tr>
-            <td>{{item.name}}:</td>
-            <td>{{item.val}}</td>
-          </tr>
-        </template>
-      </tbody>
-    </table>
+
+    <paper-material>
+      <h3>Treehouse Achievements for:</h3>
+      <h2><a href="https://teamtreehouse.com/{{response.profile_name}}" target="_blank">{{response.name}}</a></h2>
+      <table class="point-wrap">
+        <tbody><tr>
+          <th>Subject</th>
+          <th>Points</th>
+        </tr>
+        </tbody><tbody>
+          <template is="dom-repeat" items="{{toArray(response.points)}}">
+            <tr>
+              <td>{{item.name}}:</td>
+              <td>{{item.val}}</td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </paper-material>
+
+    <paper-material class="badge-wrap">
+      <template is="dom-repeat" items="{{reverseArray(response.badges)}}">
+        <div class="badge" id="th{{item.id}}" style="background-image: radial-gradient(circle, rgba(255,255,255,0), rgba(255,255,255,1)), url({{item.icon_url}})">
+          <h4 class="title">{{item.name}}</h4>
+          <h5>{{getCourse(item.courses)}}</h5>
+          <p>{{item.earned_date}}</p>
+        </div>
+      </template>
+    </paper-material>
 
     <iron-ajax auto="" url="https://teamtreehouse.com/jameswarner2.json" handle-as="json" last-response="{{response}}" debounce-duration="300"></iron-ajax>
 
@@ -18522,6 +18522,21 @@ if (!window.Promise) {
           pointList.push(point);
         }
         return pointList;
+      },
+
+      getCourse: function(array) {
+        if (array[0]) {
+          array = array[0];
+          if (array.title) {
+            array = array.title;
+          }
+        }
+        return array;
+      },
+
+      reverseArray: function(array) {
+        array.reverse();
+        return array;
       }
 
     });
