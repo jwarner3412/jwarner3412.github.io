@@ -17107,13 +17107,8 @@ module.exports = Array.isArray || function (arr) {
       app.route = 'home';
     });
 
-    page('/users', function() {
-      app.route = 'users';
-    });
-
-    page('/users/:name', function(data) {
-      app.route = 'user-info';
-      app.params = data.params;
+    page('/edu', function() {
+      app.route = 'edu';
     });
 
     page('/contact', function() {
@@ -17392,43 +17387,6 @@ module.exports = Array.isArray || function (arr) {
       }
     </style>
   </template>
-</dom-module>
-<dom-module id="my-greeting" assetpath="my-greeting/">
-  <template>
-    <style include="shared-styles">
-      :host {
-        display: block;
-      }
-
-      span,
-      input {
-        @apply(--paper-font-body2);
-      }
-    </style>
-
-    <h2 class="page-title">{{greeting}}</h2>
-    <span>Update text to change the greeting.</span>
-    
-    <input value="{{greeting::input}}">
-  </template>
-
-  <script>
-    (function() {
-      'use strict';
-
-      Polymer({
-        is: 'my-greeting',
-
-        properties: {
-          greeting: {
-            type: String,
-            value: 'Welcome!',
-            notify: true
-          }
-        }
-      });
-    })();
-  </script>
 </dom-module>
 <dom-module id="my-list" assetpath="my-list/">
   <template>
@@ -18503,15 +18461,44 @@ if (!window.Promise) {
 
 <dom-module id="treehouse-json" assetpath="treehouse-json/">
   <template>
-    <iron-ajax auto="" url="http://teamtreehouse.com/jameswarner2.json" handle-as="json" last-response="{{response}}" debounce-duration="300"></iron-ajax>
+
     <style>
       :host {
         display: block;
       }
+      table {
+        margin: 0 auto;
+      }
+
+      h2, h3 {
+        text-align: center;
+      }
+
+      th {
+        text-align: left;
+      }
     </style>
-    <span>{{response}}</span>
-    <div>Hello from <span>{{foo}}</span></div>
+    <h3>Treehouse Achievements for:</h3>
+    <h2>{{response.name}}</h2>
+    <table class="point-wrap">
+      <tbody><tr>
+        <th>Subject</th>
+        <th>Points</th>
+      </tr>
+      </tbody><tbody>
+        <template is="dom-repeat" items="{{toArray(response.points)}}">
+          <tr>
+            <td>{{item.name}}:</td>
+            <td>{{item.val}}</td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+
+    <iron-ajax auto="" url="https://teamtreehouse.com/jameswarner2.json" handle-as="json" last-response="{{response}}" debounce-duration="300"></iron-ajax>
+
   </template>
+
   <script>
   (function() {
     'use strict';
@@ -18523,6 +18510,44 @@ if (!window.Promise) {
         foo: {
           type: String,
           value: 'treehouse-json',
+          notify: true
+        }
+
+      },
+
+      toArray: function(obj) {
+        var pointList = [];
+        for (var i in obj) {
+          var point = {name: i, val: obj[i]};
+          pointList.push(point);
+        }
+        return pointList;
+      }
+
+    });
+  })();
+  </script>
+</dom-module>
+<dom-module id="my-contact" assetpath="my-contact/">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <div>Hello from <span>{{foo}}</span></div>
+  </template>
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'my-contact',
+
+      properties: {
+        foo: {
+          type: String,
+          value: 'my-contact',
           notify: true
         }
       }
