@@ -19832,6 +19832,7 @@ if (!window.Promise) {
       :host {
         display: block;
       }
+
       table {
         margin: 0 auto;
       }
@@ -19864,8 +19865,6 @@ if (!window.Promise) {
         text-align: center;
         display: flex;
         flex-direction: column;
-        /*justify-content: space-around;
-        vertical-align: bottom;*/
         background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
         background-repeat: no-repeat;
         background-position: center;
@@ -19879,63 +19878,99 @@ if (!window.Promise) {
         padding-top: 20%;
         flex: 1;
       }
+
       .badge h5, .badge h4, p {
         margin: .2em 0;
       }
 
       paper-button {
-
+        margin-bottom: 8px;
       }
+
     </style>
 
     <paper-material>
+
       <div class="wrapper">
+
         <h3>Treehouse Achievements for:</h3>
+
         <h2><a href="https://teamtreehouse.com/{{response.profile_name}}" target="_blank">{{response.name}}</a></h2>
+
         <table class="point-wrap">
+
           <tbody><tr>
+
             <th>Subject<hr></th>
+
             <th>Points<hr></th>
+
           </tr>
+
           </tbody><tbody>
+
             <template is="dom-repeat" items="{{toArray(response.points)}}">
+
               <tr>
+
                 <td>{{item.name}}:<hr></td>
+
                 <td>{{item.val}}<hr></td>
 
               </tr>
+
             </template>
+
             <tr>
               <td colspan="2">
+
                 <paper-button raised="" onclick="dialog.open()">Show Completed Courses</paper-button>
+
                 <paper-dialog id="dialog">
+
                   <h2>Badges</h2>
+
                   <paper-dialog-scrollable>
+
                     <paper-material class="badge-wrap">
+
                       <template is="dom-repeat" items="{{reverseArray(response.badges)}}">
+
                         <div class="badge" id="th{{item.id}}" style="background-image: radial-gradient(circle, rgba(255,255,255,0), rgba(255,255,255,1)), url({{item.icon_url}})">
+
                         <h4 class="title">{{item.name}}</h4>
+
                         <h5>{{getCourse(item.courses)}}</h5>
+
                         <p>{{item.earned_date}}</p>
+
                       </div>
+
                     </template>
+
                   </paper-material>
+
                 </paper-dialog-scrollable>
+
                 <div class="buttons">
+
                   <paper-button dialog-dismiss="">Close</paper-button>
+
                 </div>
+
               </paper-dialog>
+
               </td>
+
             </tr>
+
           </tbody>
+
         </table>
+
       </div>
 
-
-
-  </paper-material>
-
-    
+    </paper-material>
 
     <iron-ajax auto="" url="https://teamtreehouse.com/jameswarner2.json" handle-as="json" last-response="{{response}}" debounce-duration="300"></iron-ajax>
 
@@ -20020,22 +20055,30 @@ if (!window.Promise) {
         display: block;
         margin: 4px;
       }
+
       paper-card {
         margin: 4px;
         width: 100%;
       }
+
       li {
         margin: 8px 0;
       }
+
       dd {
         margin-bottom: 12px;
       }
 
     </style>
+
     <paper-card heading="Automotive Work Experience">
+
       <div class="card-content">
+
         <h3>Flood Ford of Narragansett</h3>
+
         <p><strong>Technician, 2005-2009</strong></p>
+
         <p>Worked as dispatcher, service writer, and parts specialist on understaffed or busy days</p>
 
         <h3>Kingston Auto Sales</h3>
@@ -20051,63 +20094,114 @@ if (!window.Promise) {
         <p>Introduced shop-management software, established part and labor pricing system for consistent and profitable job sales</p>
 
         <h3>Midas of Wakefield</h3>
+
         <p><strong>Service Manager/Shop Foreman, 2011-2012</strong></p>
         Responsibilities included:
+
         <ul>
+
           <li>Scheduling appointments</li>
+
           <li>Job dispatching</li>
+
           <li>Daily profit tracking</li>
+
           <li>Inventory management</li>
+
           <li>Customer &amp; vendor invoice filing</li>
+
           <li>Job estimates, sales, and invoicing</li>
+
           <li>Repair quality checks</li>
+
           <li>Keeping office and customer area clean</li>
+
           <li>Maintained avg. weekly sales of $25K with 2 techs in the first 2 months of store opening</li>
+
           <li>Took repair jobs when not invested in office work</li>
+
         </ul>
 
         <h3>Self-Employed</h3>
+
         <p><strong>2012-present</strong></p>
+
         <p>Grew loyal customer base over 4 years</p>
+
         <p>Offering online booking for customer convenience &amp; employee productivity</p>
+
       </div>
+
     </paper-card>
+
     <paper-card heading="Skills and Certifications">
+
       <div class="card-content">
+
         <ul>
+
           <li>Advanced understanding of electronic systems</li>
+
           <li>Strong knowledge of multiplexing and computerized diagnostics</li>
+
           <li>Ability to read and comprehend written instructions and diagrams/schematics</li>
+
           <li>Ability to work independently and as part of a team </li>
+
           <li>Have experience in circuit board repair/reworking</li>
+
           <li>Quick and motivated learner</li>
+
           <li>Experience in BMW/Mini, VW/Audi, and all major asian and domestic pass. vehicle manufacturers</li>
+
           <li>ASE Certified: Advanced Level Engine Specialist, Brakes, Electrical Systems, Steering and Suspension</li>
+
           <li>Ford Certified Steering and Suspension Specialist</li>
+
           <li>Ford Certified Advanced Electrical Systems Specialist</li>
+
           <li>Rhode Island State Safety and Emissions Inspector</li>
+
           <li>Proficient MIG welder</li>
+
           <li>Experience with ADP dealer management software</li>
+
           <li>Firefighter for the Union Fire District for 8 years, Nationally Certified 1041 &amp; 1403 Live Burn Instructor, Firefighter 1+2 Cert, Hazmat Ops Cert, Former Decon Team Member, Search and Rescue, RIT Certified </li>
+
           <li>Strong foundation in web coding and software development</li>
+
         </ul>
+
       </div>
+
     </paper-card>
+
     <paper-card dark="" heading="Education and Training">
-      <div class="card-content">
-      <dl>
 
-      <dt>Ford New England Training Center in Southboro, Mass.</dt>
-      <dd>(See binder)</dd>
-      <dt>“Upsell Training” in Las Vegas through Flood Ford</dt>
-      <dd>Focused on multipoint inspections, and presentation to the customer</dd>
-      <dt>Snap-op Verus Training</dt>
-      <dd>Advanced oscilliscope diagnostics</dd>
-    </dl>
-    </div>
+      <div class="card-content">
+
+        <dl>
+
+          <dt>Ford New England Training Center in Southboro, Mass.</dt>
+
+          <dd>(See binder)</dd>
+
+          <dt>“Upsell Training” in Las Vegas through Flood Ford</dt>
+
+          <dd>Focused on multipoint inspections, and presentation to the customer</dd>
+
+          <dt>Snap-op Verus Training</dt>
+
+          <dd>Advanced oscilliscope diagnostics</dd>
+
+        </dl>
+
+      </div>
 
     </paper-card>
+
   </template>
+
   <script>
   (function() {
     'use strict';
