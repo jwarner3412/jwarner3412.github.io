@@ -72,8 +72,7 @@ class MyView1 extends PolymerElement {
           <h3>Midas of Wakefield</h3>
           <dt><strong>Service Manager/Shop Foreman, 2011-2012</strong></dt>
           <dd>Responsibilities included:
-          <ul>
-            <li>Scheduling appointments</li>
+          <ul><li>Scheduling appointments</li>
             <li>Job dispatching</li>
             <li>Daily profit tracking</li>
             <li>Inventory management</li>
@@ -94,7 +93,6 @@ class MyView1 extends PolymerElement {
           <h3>Self-Employed</h3>
           <dt><strong>2017-Present</strong></dt>
         </dl>
-
       </div>
     `;
   }
