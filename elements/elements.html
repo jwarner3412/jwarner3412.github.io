@@ -19926,7 +19926,7 @@ if (!window.Promise) {
               <td colspan="2">
 
                 <paper-button raised="" onclick="dialog.open()">Show Completed Courses</paper-button>
-		<paper-button raised="" onclick="treehouseJson.goToLink(this)">Check out my GitHub</paper-button>
+		<a href="https://github.com/jwarner3412"><paper-button raised="" onclick="" noink>Check out my GitHub</paper-button></a>
                 <paper-dialog id="dialog">
 
                   <h2>Badges</h2>
@@ -20002,12 +20002,6 @@ if (!window.Promise) {
           }
         }
         return pointList;
-      },
-	
-      goToLink: function(el) {
-      	el.addEventListener('transitionend', function(e) {
-   	  location.href = 'https://github.com/jwarner3412';
-  	});
       },
 
       getCourse: function(array) {
