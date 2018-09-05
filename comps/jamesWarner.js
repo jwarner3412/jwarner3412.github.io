@@ -1,6 +1,9 @@
 import {html, LitElement} from '@polymer/lit-element';
 import '@polymer/app-layout/app-layout.js'
-import '/comps/appView.js'
+import '@polymer/app-layout/app-scroll-effects/app-scroll-effects.js'
+import '/comps/navBar.js'
+import '/comps/aboutView.js'
+import '/comps/eduView.js'
 
 
 class JamesWarner extends LitElement {
@@ -22,11 +25,11 @@ class JamesWarner extends LitElement {
       .then(res => {
         [
           this.about, 
-          this.contact, 
           this.edu, 
           this.wrkEx, 
           this.skills, 
-          this.projects
+          this.projects,
+          this.contact 
         ] = res
         this.linkNames = res.map(item => item.title)
         this.paint = this.thePaint()
@@ -39,39 +42,41 @@ class JamesWarner extends LitElement {
   }
 
   thePaint() {
-    console.log(this.edu)
     return html`
       <style>
+        :host {
+          background-color: gray;
+        }
         app-header {
           background-color: blue;
           color: white;
+          box-shadow: 5px, 5px, 5px, black;
         }
-
-        a {
-          color: white;
-          display: inline-flex;
-          height: 100%;
-          margin: auto;
-          
+        app-toolbar {
+          justify-content: center;
         }
       </style>
       <app-header-layout fullbleed>
-        <app-header slot="header">
-          <app-toolbar>${this.linkNames.map(item => html`
-            <a href='/${item}'>${item}</a>
-          `)}</app-toolbar>
+        <app-header fixed condenses effects="waterfall" slot="header">
+          <app-toolbar></app-toolbar>
+          <app-toolbar></app-toolbar>
+          <app-toolbar>
+            <nav-bar .navList=${this.linkNames}></nav-bar>
+          </app-toolbar>
         </app-header>
 
-        <about-view .appData=${this.about}></about-view>
+        <about-view .content=${this.about}></about-view>
 
-        <list-view .appData=${this.edu}></list-view>
-        <wrk-view .appData=${this.wrkEx}></wrk-view>
+        <edu-view .content=${this.edu}></edu-view>
+
+        <list-view .appData=${this.wrkEx}></list-view>
 
         <skills-view .appData=${this.skills}></skills-view>
+
         <projects-view .appData=${this.projects}></projects-view>
 
       </app-header-layout>
     `
   }
 }
-customElements.define('james-warner', JamesWarner);
+customElements.define('james-warner', JamesWarner)

@@ -1,23 +1,7 @@
 [{
     "title": "About",
-    "items": []
-},{
-    "title": "Contact",
-    "items": [
-        {
-            "name": "Email",
-            "url": "jwarner3412@gmail.com",
-            "img": ""
-        },{
-            "name": "GitHub",
-            "url": "https://github.com/jwarner3412",
-            "img": ""
-        },{
-            "name": "LinkedIn",
-            "url": "",
-            "img": ""
-        }
-    ]
+    "text": "",
+    "img": ""
 },{
     "title": "Education",
     "items": [
@@ -184,6 +168,23 @@
             "url": "",
             "desc": "Node.js app intended to scrape the ksp wiki for information about the orbital bodys parameters, then output a csv file for conversion to JSON. For use with the Satellite Launch Calculator.",
             "src": "https://github.com/jwarner3412/ksp-wiki-scraper",
+            "img": ""
+        }
+    ]
+},{
+    "title": "Contact",
+    "items": [
+        {
+            "name": "Email",
+            "url": "jwarner3412@gmail.com",
+            "img": ""
+        },{
+            "name": "GitHub",
+            "url": "https://github.com/jwarner3412",
+            "img": ""
+        },{
+            "name": "LinkedIn",
+            "url": "",
             "img": ""
         }
     ]
