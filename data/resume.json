@@ -1,0 +1,190 @@
+[{
+    "title": "About",
+    "items": []
+},{
+    "title": "Contact",
+    "items": [
+        {
+            "name": "Email",
+            "url": "jwarner3412@gmail.com",
+            "img": ""
+        },{
+            "name": "GitHub",
+            "url": "https://github.com/jwarner3412",
+            "img": ""
+        },{
+            "name": "LinkedIn",
+            "url": "",
+            "img": ""
+        }
+    ]
+},{
+    "title": "Education",
+    "items": [
+        {
+            "name": "South Kingstown High School",
+            "years": "2001-2005",
+            "desc": "Graduated, took \"Web Design\", and 2 years of \"Auto Shop\". Stong in math & science.",
+            "tags": "gen"
+        },
+        {
+            "name": "Ford New England Training Center",
+            "years": "2005-2009",
+            "desc": "General automotive, and advanced electrical & computer network diagnostics.",
+            "tags": "auto"
+        },
+        {
+            "name": "Snap-On Oscilliscope Training",
+            "years": "2015",
+            "desc": "Diagnostics through reading electrical signals with an oscilliscope.",
+            "tags": "auto"
+        },
+        {
+            "name": "TeamTreehouse.com",
+            "years": "2016-Present",
+            "desc": "Began my journey. Focusing on end to end web technoligies.",
+            "tags": "code",
+            "username": "jwarner3412",
+            "url": "https://www.teamtreehouse.com/"
+        },
+        {
+            "name": "edX.org",
+            "years": "2018-Present",
+            "desc": "Enrolled in HarvardX's CS50 Computer Science Courses.",
+            "tags": "code",
+            "username": "JamesWarner33ef",
+            "url": "https://www.edx.org/"
+        }
+    ]
+},{
+    "title": "Experiance",
+    "items": [
+        {
+            "name": "Flood Ford of Narragansett",
+            "years": "2005-2009",
+            "title": "Automotive Technician",
+            "desc": "Entered field out of high school, quickly became the go-to tech for complex electrical diagnostics.",
+            "tags": "auto"
+        },
+        {
+            "name": "Kingston Auto Sales & Service",
+            "years": "2009-2011",
+            "title": "Automotive Technician",
+            "desc": "Implemented record keeping and cost-tracking on used cars before being introduced to the lot for sale.\n Assisted service writer with job sales (offered overview of line items to customer and provided the knowledge to allow the customer to make an informed decision).\nImplemented multi-point checks and an organized dispatch system.\nIntroduced shop-management software, established part and labor pricing system for consistent and profitable job sales",
+            "tags": "auto"
+        },
+        {
+            "name": "Midas of Wakefield",
+            "years": "2011-2012",
+            "title": "Automotive Technician",
+            "desc": "Assumed role of Service Manager due to high employee turn-over. Responsible for profit tracking, customer service, and quality control during that time.",
+            "tags": "auto"
+        },
+        {
+            "name": "Warner's Auto Care",
+            "years": "2012-2016",
+            "title": "Owner/Operator",
+            "desc": "Grew loyal customer base over 4 years. Offered online booking for customer convenience and employee productivity.",
+            "tags": "auto"
+        },
+        {
+            "name": "Sampson's Automotive",
+            "years": "2016-2017",
+            "title": "Service Manager",
+            "desc": "Responsibiltys similar to Midas.",
+            "tags": "auto"
+        },
+        {
+            "name": "Warner's Mobile Repair",
+            "years": "2017-Present",
+            "title": "Owner/Operator",
+            "desc": "Offering on-site repair for RV's, boats, buses, and equipment.",
+            "tags": "auto"
+        }
+    ]
+},{
+    "title": "Skills",
+    "items": {
+        "general": [
+            "Advanced understanding of electronic systems",
+            "Strong knowledge of multiplexing and computerized diagnostics",
+            "Ability to read and comprehend written instructions and diagrams/schematics",
+            "High mechanical aptitude on complex assemblies with close attention to detail",
+            "Fluent in metric and imperial system, strong in complex math",
+            "Ability to work independently and as part of a team",
+            "Quick and motivated learner",
+            "Advanced Windows(XP thru 10) & Linux user, comfortable in command line environment",
+            "Comfortable with MS Office Suite"
+        ],
+        "automotive": [
+            "Experienced in circuit board repair, i.e. replace components or repair circuit traces via solder connections",
+            "Experienced with ADP dealer management software and various shop management suites",
+            "Proficient MIG welder",
+            "Experienced in BMW/Mini, VW/Audi, and all major asian and domestic pass. vehicle manufacturers",
+            "ASE Certified: Advanced Level Engine Specialist, Brakes, Electrical Systems, Steering and Suspension",
+            "Ford Certified Steering and Suspension Specialist",
+            "Ford Certified Advanced Electrical Systems Specialist",
+            "Rhode Island State Safety and Emissions Inspector"
+        ],
+        "coding": [
+            {
+                "name": "JavaScript ES6",
+                "lvl": 4
+            },{
+                "name": "HTML5",
+                "lvl": 4
+            },{
+                "name": "CSS / SASS",
+                "lvl": 4
+            },{
+                "name": "Python",
+                "lvl": 2
+            },{
+                "name": "Web Components / Custom Elements",
+                "lvl": 3
+            },{
+                "name": "Node.js",
+                "lvl": 3
+            },{
+                "name": "C / C#",
+                "lvl": 2
+            },{
+                "name": "WordPress",
+                "lvl": 2
+            },{
+                "name": "MongoDB",
+                "lvl": 1
+            },{
+                "name": "PHP",
+                "lvl": 1
+            },{
+                "name": "MySQL",
+                "lvl": 1
+            },{
+                "name": "Gulp",
+                "lvl": 2
+            },{
+                "name": "Angular.js",
+                "lvl": 2
+            }
+        ]
+    }
+},{
+    "title": "Projects",
+    "items": [
+        {
+            "title": "Satellite Launch Calculator",
+            "url": "https://jwarner3412.github.io/kerbility",
+            "desc": "JavaScript app for calculating launch parameters in order to evenly space out a satelitte network with a single launch. User inputs target altitude or time period for desired network, along with total number of satellites on the launch vehilcle. Calculator outputs an elliptic deployment orbit parameters and required change of velocity required of each satellite to achieve circular target orbit. Every periapsis, a single satellite is deployed and performs circularization burn.",
+            "src": "https://github.com/jwarner3412/kspCalc",
+            "img": ""
+        },
+        {
+            "title": "KSP Wiki Scraper",
+            "url": "",
+            "desc": "Node.js app intended to scrape the ksp wiki for information about the orbital bodys parameters, then output a csv file for conversion to JSON. For use with the Satellite Launch Calculator.",
+            "src": "https://github.com/jwarner3412/ksp-wiki-scraper",
+            "img": ""
+        }
+    ]
+}]

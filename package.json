@@ -1,0 +1,30 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "My HTML5 resume website",
+  "main": "index.html",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwarner3412/resume.git"
+  },
+  "author": "James Warner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwarner3412/resume/issues"
+  },
+  "homepage": "https://github.com/jwarner3412/resume#readme",
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.1.1"
+  },
+  "dependencies": {
+    "@polymer/app-layout": "^3.0.0-pre.25",
+    "@polymer/lit-element": "^0.6.0-dev.6",
+    "lit-html": "^0.11.0"
+  }
+}
