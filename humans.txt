@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    James Warner -- Owner/Dev -- jwarner3412@gmail.com
 
 # THANKS
 
@@ -13,3 +13,4 @@
 
     CSS3, HTML5
     Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Lit-Element, WebComponents

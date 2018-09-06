@@ -28,16 +28,20 @@
             "years": "2016-Present",
             "desc": "Began my journey. Focusing on end to end web technoligies.",
             "tags": "code",
-            "username": "jwarner3412",
-            "url": "https://www.teamtreehouse.com/"
+            "url": "https://www.teamtreehouse.com/",
+            "api": "",
+            "username": "jameswarner2",
+            "append": ".json"
         },
         {
             "name": "edX.org",
             "years": "2018-Present",
             "desc": "Enrolled in HarvardX's CS50 Computer Science Courses.",
             "tags": "code",
+            "url": "https://www.edx.org/",
+            "api": "api/enrollments/v1/enrollments/?user=",
             "username": "JamesWarner33ef",
-            "url": "https://www.edx.org/"
+            "append": ""
         }
     ]
 },{
@@ -88,71 +92,81 @@
     ]
 },{
     "title": "Skills",
-    "items": {
-        "general": [
-            "Advanced understanding of electronic systems",
-            "Strong knowledge of multiplexing and computerized diagnostics",
-            "Ability to read and comprehend written instructions and diagrams/schematics",
-            "High mechanical aptitude on complex assemblies with close attention to detail",
-            "Fluent in metric and imperial system, strong in complex math",
-            "Ability to work independently and as part of a team",
-            "Quick and motivated learner",
-            "Advanced Windows(XP thru 10) & Linux user, comfortable in command line environment",
-            "Comfortable with MS Office Suite"
-        ],
-        "automotive": [
-            "Experienced in circuit board repair, i.e. replace components or repair circuit traces via solder connections",
-            "Experienced with ADP dealer management software and various shop management suites",
-            "Proficient MIG welder",
-            "Experienced in BMW/Mini, VW/Audi, and all major asian and domestic pass. vehicle manufacturers",
-            "ASE Certified: Advanced Level Engine Specialist, Brakes, Electrical Systems, Steering and Suspension",
-            "Ford Certified Steering and Suspension Specialist",
-            "Ford Certified Advanced Electrical Systems Specialist",
-            "Rhode Island State Safety and Emissions Inspector"
-        ],
-        "coding": [
-            {
-                "name": "JavaScript ES6",
-                "lvl": 4
-            },{
-                "name": "HTML5",
-                "lvl": 4
-            },{
-                "name": "CSS / SASS",
-                "lvl": 4
-            },{
-                "name": "Python",
-                "lvl": 2
-            },{
-                "name": "Web Components / Custom Elements",
-                "lvl": 3
-            },{
-                "name": "Node.js",
-                "lvl": 3
-            },{
-                "name": "C / C#",
-                "lvl": 2
-            },{
-                "name": "WordPress",
-                "lvl": 2
-            },{
-                "name": "MongoDB",
-                "lvl": 1
-            },{
-                "name": "PHP",
-                "lvl": 1
-            },{
-                "name": "MySQL",
-                "lvl": 1
-            },{
-                "name": "Gulp",
-                "lvl": 2
-            },{
-                "name": "Angular.js",
-                "lvl": 2
-            }
-        ]
-    }
+    "catagories": [
+        {
+            "title": "General",
+            "items": [
+                "Advanced understanding of electronic systems",
+                "Strong knowledge of multiplexing and computerized diagnostics",
+                "Ability to read and comprehend written instructions and diagrams/schematics",
+                "High mechanical aptitude on complex assemblies with close attention to detail",
+                "Fluent in metric and imperial system, strong in complex math",
+                "Ability to work independently and as part of a team",
+                "Quick and motivated learner",
+                "Advanced Windows(XP thru 10) & Linux user, comfortable in command line environment",
+                "Comfortable with MS Office Suite"
+            ]
+        },{
+            "title": "Electro/Mechanical",
+            "items": [
+                "Experienced in circuit board repair, i.e. replace components or repair circuit traces via solder connections",
+                "Experienced with ADP dealer management software and various shop management suites",
+                "Proficient MIG welder",
+                "Experienced in BMW/Mini, VW/Audi, and all major asian and domestic pass. vehicle manufacturers",
+                "ASE Certified: Advanced Level Engine Specialist, Brakes, Electrical Systems, Steering and Suspension",
+                "Ford Certified Steering and Suspension Specialist",
+                "Ford Certified Advanced Electrical Systems Specialist",
+                "Rhode Island State Safety and Emissions Inspector"
+            ]
+        },{
+            "title": "Coding",
+            "items": [
+                {
+                    "name": "JavaScript ES6",
+                    "lvl": 4
+                },{
+                    "name": "HTML5",
+                    "lvl": 4
+                },{
+                    "name": "CSS / SASS",
+                    "lvl": 4
+                },{
+                    "name": "Python",
+                    "lvl": 2
+                },{
+                    "name": "Web Components / Custom Elements",
+                    "lvl": 3
+                },{
+                    "name": "Node.js",
+                    "lvl": 3
+                },{
+                    "name": "C / C#",
+                    "lvl": 2
+                },{
+                    "name": "WordPress",
+                    "lvl": 2
+                },{
+                    "name": "MongoDB",
+                    "lvl": 1
+                },{
+                    "name": "PHP",
+                    "lvl": 1
+                },{
+                    "name": "MySQL",
+                    "lvl": 1
+                },{
+                    "name": "Gulp",
+                    "lvl": 2
+                },{
+                    "name": "Angular.js",
+                    "lvl": 2
+                },{
+                    "name": "React.js",
+                    "lvl": 2
+                }
+            ]
+        }
+    ]
 },{
     "title": "Projects",
     "items": [

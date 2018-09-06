@@ -31,7 +31,6 @@ class NavBar extends LitElement {
   }
 
   returnNav (list) {
-    console.log(list)
     return list.map(item => html`<a href='/${item}'>${item}</a>`)
   }
 }

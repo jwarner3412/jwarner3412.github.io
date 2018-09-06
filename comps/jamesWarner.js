@@ -3,7 +3,9 @@ import '@polymer/app-layout/app-layout.js'
 import '@polymer/app-layout/app-scroll-effects/app-scroll-effects.js'
 import '/comps/navBar.js'
 import '/comps/aboutView.js'
-import '/comps/eduView.js'
+import '/comps/eduWrkView.js'
+import '/comps/projectView.js'
+import '/comps/contactView.js'
 
 
 class JamesWarner extends LitElement {
@@ -15,11 +17,13 @@ class JamesWarner extends LitElement {
       wrkEx: {type: Object},
       skills: {type: Object},
       projects: {type: Object},
+      selected: {type: String},
     }
   }
   constructor() {
     super()
     this.paint = html`<h1>Loading...</h1>`
+    this.selected = "about"
     fetch('./data/resume.json')
       .then(res => res.json())
       .then(res => {
@@ -59,7 +63,7 @@ class JamesWarner extends LitElement {
       <app-header-layout fullbleed>
         <app-header fixed condenses effects="waterfall" slot="header">
           <app-toolbar></app-toolbar>
-          <app-toolbar></app-toolbar>
+          <app-toolbar>test2</app-toolbar>
           <app-toolbar>
             <nav-bar .navList=${this.linkNames}></nav-bar>
           </app-toolbar>
@@ -67,13 +71,13 @@ class JamesWarner extends LitElement {
 
         <about-view .content=${this.about}></about-view>
 
-        <edu-view .content=${this.edu}></edu-view>
+        <edu-wrk .content=${this.edu}></edu-wrk>
 
-        <list-view .appData=${this.wrkEx}></list-view>
+        <edu-wrk .content=${this.wrkEx}></edu-wrk>
 
-        <skills-view .appData=${this.skills}></skills-view>
+        <skills-view .content=${this.skills}></skills-view>
 
-        <projects-view .appData=${this.projects}></projects-view>
+        <projects-view .content=${this.projects}></projects-view>
 
       </app-header-layout>
     `

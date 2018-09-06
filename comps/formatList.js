@@ -1,4 +1,5 @@
 import {html, LitElement} from '@polymer/lit-element';
+import '/comps/linkFetch.js'
 
 class FormatList extends LitElement {
   static get properties() {
@@ -21,6 +22,7 @@ class FormatList extends LitElement {
   }
 
   returnItem(items) {
+
     let temp = []
     items.map(item => {
       temp.push(html`
@@ -28,6 +30,7 @@ class FormatList extends LitElement {
           <h2>${item.name}</h2>
           <h3>${item.years}</h3>
           <p>${item.desc}</p>
+          ${item.url ? html`<link-fetch .url=${item.url} .api=${item.api} .user=${item.username} .append=${item.append}></link-fetch>` : ''}
         </div>
       `)
     })
